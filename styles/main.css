@@ -1,0 +1,327 @@
+/* 
+    Original Author: Brianna Baldwin
+    Date Created: 04/05/2022
+    Date Last Modified: 04/19/2022
+    Modified by: Brianna Baldwin
+    Modification log:
+        04/05/2022 - Created file | added styles to welcome about, and skills page
+        04/09/2022 - Refined file to remove unwanted content
+        04/12/2022 - Added overlay styling
+        04/14/2022 - Added contact and footer styling
+        04/15/2022 - Edited page, contact and footer styling
+        04/19/2022 - Edited all content for fullPage.js
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html,
+body,
+footer,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.s1 {
+    background-image: url("../assets/helloImage.jpg");
+    /*Photo by Simon Berger from Pexels*/
+    background-color: #fbf0f8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    position: relative;
+    height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+    /* Welcome styling */
+    .s1 h1 {
+        font-size: 50px;
+        margin: auto;
+    }
+
+.welcome-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    font-weight: 500;
+}
+
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+    color: #171717 !important;
+    font-weight: 600;
+}
+
+/* About Styling */
+.s2 {
+    background-color: #DCBCD2;
+    color: #171717;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+    .s2 h2 {
+        padding: 40px 0 10px 0;
+    }
+
+#profile-pic {
+    border-radius: 100%;
+    height: 250px;
+    border: solid 5px #512A45;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skills styling */
+
+#skills {
+    color: #171717;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+#skills h3 {
+    font-weight: 100;
+    padding-top: 2rem;
+}
+
+#skills-certifications a:hover {
+    text-decoration: none;
+}
+
+.skills-column {
+    background-color: #512A45;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+    .skills-column:hover {
+        background-color: rgb(238, 208, 131);
+        color: #171717;
+        transition: 0.3s ease-in-out;
+        font-weight: 500;
+    }
+
+/* Portfolio Styling */
+
+#portfolio {
+    padding: 50px 20px;
+    color: #171717;
+    text-align: center;
+    background-color: #DCBCD2;
+}
+
+.image-holder {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+    .image-holder:hover {
+        transform: scale(1.07, 1.07);
+        transition: 0.5s ease-in-out;
+    }
+
+.port-container {
+    padding: 1.5rem !important;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(81, 42, 69, 0.9); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+
+/* Contact Styling */
+
+#contact {
+    color: #171717;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+    #contact h2 {
+        text-align: center;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    #contact input:hover, #contact input:focus, #contact textarea:hover, #contact textarea:focus {
+        outline: 0;
+        box-shadow: 0 1px 1px rgba(238, 208, 131, 0.075) inset, 0 0 8px rgba(238, 208, 131, 0.6);
+        border-color: #eed083;
+    }
+
+#submit-button {
+    text-align: center;
+}
+
+#contact button {
+    color: #FFF;
+    background-color: #512A45;
+    font-size: 20px;
+}
+
+    #contact button:hover {
+        background-color: #eed083;
+        color: #171717;
+        border-color: #e6c36a;
+        font-weight: 500;
+    }
+
+.contact-container {
+    width: 80vw;
+    padding: 1.5rem;
+}
+
+/* Footer Styling */
+
+footer {
+    height: 11vh;
+    background-color: #DCBCD2;
+    padding: 20px;
+    text-align: center;
+}
+
+    footer a {
+        color: #171717;
+    }
+
+.fab {
+    width: 40px;
+    transition: 0.05s ease-in-out;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.media-column {
+    padding: .5rem;
+}
+
+.fab:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.05s ease-in-out;
+    color: #171717;
+}
+
+#cwi-img {
+    width: 39px;
+    transition: 0.05s ease-in-out;
+    border-radius: 3px;
+}
+#cwi-img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.05s ease-in-out;
+    color: #171717;
+}
+
+@media only screen and (min-width: 975px) {
+
+    .hide-mobile {
+        display: flex;
+    }
+    /*About section styling*/
+    .s2 {
+        padding: 0px 50px;
+    }
+
+    #profile-pic {
+        height: 500px;
+    }
+
+    #about-content {
+        font-size: 25px;
+        padding: 0 30px;
+    }
+    /*Skills section styling*/
+    #skills {
+        padding: 0 3rem;
+    }
+
+        #skills h2 {
+            padding: 3rem 0;
+        }
+
+        #skills h3 {
+            padding-top: 3rem;
+        }
+
+    .skills-column {
+        margin: 1rem;
+        font-size: 22px;
+    }
+
+    #progress-bar {
+        display: block;
+    }
+
+    .progress {
+        height: 3rem;
+        border-radius: 25px;
+        font-size: 20px;
+    }
+
+    .progress-bar {
+        color: #171717;
+    }
+
+    /* Portfolio section styling */
+    #portfolio h2 {
+        padding-bottom: 3rem;
+    }
+
+    .col-sm-10 {
+        margin: 0 auto;
+    }
+
+        .col-sm-10 label {
+            padding: 5px 0 0 10px;
+        }
+
+    #fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip {
+        font-size: 16px;
+    }
+}
