@@ -1,7 +1,7 @@
 <!--
     Author: Brianna Baldwin
     Date Created: 04/04/2022
-    Date Last Modified: 04/19/2022
+    Date Last Modified: 04/15/2022
     Modified by: Brianna Balwin
     Modification Log:
         04/04/2022 - Created file | Added file head
@@ -12,17 +12,16 @@
         04/12/2022 - Added overlay to portfolio items
         04/14/2022 - Added contact form and footer
         04/15/2022 - Edited contact form
-        04/19/2022 - Added all content to fullPage.js
+        04/21/2022 - Added some containers for styling
     -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="description" content="A software developer who has a passion for learning and developing interesting projects.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Brianna Baldwin, Bri Baldwin">
+    <meta name="author" content="Brianna Baldwin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brianna Baldwin's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.5/fullpage.min.css" integrity="sha512-x9dWEl8TRV0LIHZXXIyjLOTPQSDPrvzNau+XQjHfge0VJwAzKzr2wxI6b7gLS/ogBDmhTQXZ54L5I4mDtPNQLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -37,206 +36,226 @@
     <link href="styles/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Style Sheet -->
+    <link href="styles/styles.css" rel="stylesheet" />
+
+    <title>Brianna Baldwin Portfolio</title>
+
 </head>
 <body>
-    <div id="fullpage">
-
-        <div class="section s1">
-            <h1>
-                <span class="welcome-text">Hello, </span><br>
-                <span></span><br>
-                <span class="welcome-text">I'm</span> <br>
-                <span></span><br>
-                <span class="welcome-text">Brianna</span>
-            </h1>
-        </div>
-
-        <div class="section s2">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <img src="assets/aboutPhoto.jpg" alt="photo of Brianna Baldwin" id="profile-pic">
+    <div>
+        <header id="page-top">
+            <nav class="navbar navbar-expand-md bg-primary navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Brianna Baldwin</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-sm-6" id="about-content">
-                    <h2>About</h2>
-                    <p>
-                        I am a Software Development student at College of Western Idaho that has experience with HTML5, CSS3,
-                        C#, JavaScript, Unity, PHP and mySQL. I enjoy problem solving and working with a team to create projects.
-                        My hobbies include video games (most recently, Leauge of Legends), spending time with friends, and lifting at the gym.
-                    </p>
+            </nav>
+        </header>
+        <main>
+            <!-- Welcome image section -->
+            <div class="container-fluid p-5 bg-primary text-white text-center d-flex" id="welcome">
+                <h1>
+                    <span class="welcome-text">Hello, </span><br>
+                    <span></span><br>
+                    <span class="welcome-text">I'm</span> <br>
+                    <span></span><br>
+                    <span class="welcome-text">Brianna</span>
+                </h1>
+            </div>
+
+            <!-- About section -->
+            <div id="about">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <figure><img src="assets/aboutPhoto.jpg" alt="photo of Brianna Baldwin" id="profile-pic"></figure>
+                    </div>
+                    <div class="col-sm-6" id="about-content">
+                        <h1>About</h1>
+                        <p>
+                            <span>
+                                I am a Software Development student at College of Western Idaho that has experience with HTML5, CSS3,
+                                C#, JavaScript, Unity, PHP and mySQL. I enjoy problem solving and working with a team to create projects.
+                                My hobbies include video games (most recently, Leauge of Legends), spending time with friends, and lifting at the gym.
+                            </span><br><br>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Skills section -->
-        <div class="section s3">
+            <!-- Skills section -->
             <div id="skills">
-                <h2>Skills</h2>
-                <div>
-                    <div class="hide-mobile" id="progress-bar">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:25%; background-color: #ffadad;">
-                                HTML/CSS (25%)
-                            </div>
-                            <div class="progress-bar" role="progressbar" style="width:25%; background-color: #ffd6a5;">
-                                C# (25%)
-                            </div>
-                            <div class="progress-bar" role="progressbar" style="width:18%; background-color: #fdffb6;">
-                                PHP/mySQL (18%)
-                            </div>
-                            <div class="progress-bar" role="progressbar" style="width:18%; background-color: #caffbf;">
-                                Unity (18%)
-                            </div>
-                            <div class="progress-bar" role="progressbar" style="width:14%; background-color: #9bf6ff;">
-                                JavaScript (14%)
-                            </div>
-                        </div>
+                <h1>Skills</h1>
+                <div class="row">
+                    <div class="col-lg-6" id="canvas-container">
+                        <canvas id="chart"></canvas>
                     </div>
-                    <div class="" id="skills-certifications">
+                    <div class="col-lg-6" id="skills-certifications">
                         <h3>Certifications</h3>
                         <div class="columns is-desktop">
                             <a href="assets/btc_eDiploma.pdf" target=”_blank”>
-                                <div class="column skills-column">CWI: Basic Technical Certificate - Certified 2021</div>
+                                <div data-aos="fade-left" class="column skills-column">CWI: Basic Technical Certificate - Certified 2021</div>
                             </a>
                             <a href="assets/itc_eDiploma.pdf" target=”_blank”>
-                                <div class="column skills-column">CWI: Intermediate Technical Certificate - Certified 2021</div>
+                                <div data-aos="fade-left" class="column skills-column">CWI: Intermediate Technical Certificate - Certified 2021</div>
                             </a>
                             <a href="https://www.credly.com/badges/885ff2b0-c737-47a0-b3fb-ce0a8c87cf59?source=linked_in_profile" target=”_blank”>
-                                <div class="column skills-column">MTA: HTML5 Application Development Fundamentals - Certified 2021</div>
+                                <div data-aos="fade-left" class="column skills-column">MTA: HTML5 Application Development Fundamentals - Certified 2021</div>
                             </a>
                             <a href="https://www.credly.com/badges/283f1cbf-55a4-4ba9-af86-f97017aa4f3d/public_url" target=”_blank”>
-                                <div class="column skills-column">MTA: Database Fundamentals - Certified 2021</div>
+                                <div data-aos="fade-left" class="column skills-column">MTA: Database Fundamentals - Certified 2021</div>
                             </a>
                             <a href="https://www.freecodecamp.org/certification/brianna_baldwin/responsive-web-design" target=”_blank”>
-                                <div class="column skills-column">freeCodeCamp: Responsive Web Design Developer Certification</div>
+                                <div data-aos="fade-left" class="column skills-column">freeCodeCamp: Responsive Web Design Developer Certification</div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Portfolio Section -->
-        <div class="section s4">
+
+            <!-- Portfolio Section -->
             <div id="portfolio">
-                <h2>Portfolio</h2>
+                <h1>Portfolio</h1>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Star Man Game">
                                 <a href="https://sharemygame.com/@BriBaldwin/starman" target=”_blank”>
-                                    <img class="img-fluid" src="assets/starman.jpg" alt="A capstone game created using Unity" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/starman.jpg" alt="A capstone game created using Unity" />
                                     <div class="overlay">Star Man Game</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Concept Map for Star Man">
                                 <a href="https://drive.google.com/file/d/1G4V1VaZOJOcs4Rr0q3rdLEDfUhr-2I5z/view?usp=sharing" target=”_blank”>
-                                    <img class="img-fluid" src="assets/conceptMap.png" alt="A concept map of one of Brianna's projects" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/conceptMap.png" alt="A concept map of one of Brianna's projects" />
                                     <div class="overlay">Star Man Concept Map</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="ReciBri Book">
                                 <a href="https://briannabaldwin.github.io/bootstrapWebsite/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/recibriBook.jpg" alt="Bootstrap website Brianna built" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/recibriBook.jpg" alt="Bootstrap website Brianna built" />
                                     <div class="overlay">"ReciBri" Book</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Oasis">
                                 <a href="https://briannabaldwin.github.io/oasisWebsite/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/jsProject.png" alt="Oasis water conservation website Brianna created with JavaScript" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/jsProject.png" alt="Oasis water conservation website Brianna created with JavaScript" />
                                     <div class="overlay">Oasis Water Conservation</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="My Origional Portfolio">
                                 <a href="https://briannabaldwin.github.io/originalPortfolio/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/oldPortfolio.png" alt="Brianna Baldwin's first portfolio" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/oldPortfolio.png" alt="Brianna Baldwin's first portfolio" />
                                     <div class="overlay">Origional Portfolio</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Pokemon Vue Routing">
                                 <a href="https://briannabaldwin.github.io/pokemonVueRouting/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/pokemonRouting.png" alt="A Vue.js site created by Brianna that routes different pokemon and their stats" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/pokemonRouting.png" alt="A Vue.js site created by Brianna that routes different pokemon and their stats" />
                                     <div class="overlay">Pokemon Vue Routing</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Argon Assault Game">
                                 <a href="https://sharemygame.com/@BriBaldwin/argon-assault" target=”_blank”>
-                                    <img class="img-fluid" src="assets/argonAssault.jpg" alt="The first game I created using Unity" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/argonAssault.jpg" alt="The first game I created using Unity" />
                                     <div class="overlay">Argon Assault</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Forward Fitness">
                                 <a href="https://briannabaldwin.github.io/forwardFitnessWebsite/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/forwardFitness.jpg" alt="Mock website for a gym called Forward Fitness" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/forwardFitness.jpg" alt="Mock website for a gym called Forward Fitness" />
                                     <div class="overlay">Forward Fitness Club</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Rescue Wildlife">
                                 <a href="https://briannabaldwin.github.io/rescueWildlife/" target=”_blank”>
-                                    <img class="img-fluid" src="assets/rescueWildlife.jpg" alt="Mock website for a animal rescue" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/rescueWildlife.jpg" alt="Mock website for a animal rescue" />
                                     <div class="overlay">Wild Rescues</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="Projects from SWDV-210">
                                 <a href="https://github.com/BriannaBaldwin/SWDV210" target=”_blank”>
-                                    <img class="img-fluid" src="assets/swdv210.JPG" alt="projects from SWDV-210" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/swdv210.JPG" alt="projects from SWDV-210" />
                                     <div class="overlay">PHP Projects</div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Portfolio Item -->
-                    <div class="col-md-6 col-lg-4 p-5 port-container hide-mobile">
+                    <div class="col-md-6 col-lg-4 p-5">
                         <div class="image-holder">
                             <div class="portfolio-item mx-auto" title="SQL Disk Inventory">
                                 <a href="https://github.com/BriannaBaldwin/BB_Disk_Inventory" target=”_blank”>
-                                    <img class="img-fluid" src="assets/swdv220-diskInventory.JPG" alt="SQL project creating a disk inventory" />
+                                    <img data-aos="zoom-in" class="img-fluid" src="assets/swdv220-diskInventory.JPG" alt="SQL project creating a disk inventory" />
                                     <div class="overlay">mySQL Disk Inventory</div>
                                 </a>
                             </div>
@@ -244,24 +263,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section s5">
+
             <!-- Contact Section -->
             <div id="contact">
-                <div class="my-auto contact-container">
-                    <h2>Contact Me</h2>
-                    <form class="form-horizontal" action="mailto:bribaldwin8@gmail.com" method="POST">
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label class="control-label col-sm-2" for="name">Name:</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your name..." name="name">
-                            </div>
+                <h1>Contact Me</h1>
+                <div class="contact-container">
+                    <form name="contact-form" class="form-horizontal" action="mailto:bribaldwin8@gmail.com" onsubmit="return validateForm()" method="POST">
+                        <div class="form-group col-sm-10">
+                            <label class="control-label col-sm-2" for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name..." name="name">
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label class="control-label col-sm-2" for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your email..." name="email">
-                            </div>
+                        <div class="form-group col-sm-10">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email..." name="email">
                         </div>
                         <div class="form-group col-sm-10">
                             <label class="control-label col-sm-2" for="comment">Comments</label>
@@ -273,43 +287,41 @@
                     </form>
                 </div>
             </div>
-            <!-- Footer -->
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="column-sm-3 media-column align-items: center;">
-                            <a href="https://www.linkedin.com/in/brianna-baldwin-660bb720b/" target=”_blank”>
-                                <i class="fab fa-linkedin fa-2x hover-item" aria-label="linkedin icon"></i>
-                            </a>
-                        </div>
-                        <div class="column-sm-3 media-column">
-                            <a href="https://github.com/BriannaBaldwin" target=”_blank”>
-                                <i class="fab fa-github-square fa-2x hover-item" aria-label="GitHub icon"></i>
-                            </a>
-                        </div>
-                        <div class="column-sm-3 media-column">
-                            <a href="https://www.facebook.com/brianna.baldwin.50309" target=”_blank”>
-                                <i class="fab fa-facebook-square fa-2x hover-item" aria-label="Facebook icon"></i>
-                            </a>
-                        </div>
-                        <div class="column-sm-3 media-column align-items: center;">
-                            <a href="https://www.linkedin.com/school/college-of-western-idaho/mycompany/verification/" target=”_blank”>
-                                <img src="assets/cwiImg.jpg" alt="CWI logo" id="cwi-img"/>
-                            </a>
-                        </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row footer-row">
+                    <div class="column-sm-3 media-column align-items: center;">
+                        <a href="https://www.linkedin.com/in/brianna-baldwin-660bb720b/" target=”_blank”>
+                            <i class="fab fa-linkedin fa-2x hover-item" aria-label="linkedin icon"></i>
+                        </a>
+                    </div>
+                    <div class="column-sm-3 media-column">
+                        <a href="https://github.com/BriannaBaldwin" target=”_blank”>
+                            <i class="fab fa-github-square fa-2x hover-item" aria-label="GitHub icon"></i>
+                        </a>
+                    </div>
+                    <div class="column-sm-3 media-column">
+                        <a href="https://www.facebook.com/brianna.baldwin.50309" target=”_blank”>
+                            <i class="fab fa-facebook-square fa-2x hover-item" aria-label="Facebook icon"></i>
+                        </a>
+                    </div>
+                    <div class="column-sm-3 media-column align-items: center;">
+                        <a href="https://www.linkedin.com/groups/13653321/" target=”_blank”>
+                            <img src="assets/cwiImg.jpg" alt="CWI logo" id="cwi-img" />
+                        </a>
                     </div>
                 </div>
-            </footer>
-        </div>
+                <span><a href="#page-top" id="backtotop-text">Back to Top</a></span>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="script/script.js"></script>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.5/fullpage.min.js" integrity="sha512-IE31EphIcD5gSDjkgexgoxfgPdZWH6LL2LRoEFZem0exi+yUOuSwb3LKnZZfok6Coa9ofkrA4AEZUXzrfLoUXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        new fullpage('#fullpage', {
-            autoScrolling: true,
-            navigation: true,
-            navigationTooltips: ['Welcome', 'About Me', 'Skills', 'Portfolio', 'Contact'],
-            showActiveTooltip: true
-        })
-    </script>
 </body>
+
 </html>
