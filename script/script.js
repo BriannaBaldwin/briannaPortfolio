@@ -56,7 +56,7 @@ data: {
 
 /* Form Validation */
 function validateForm() {
-  let contactEntered = "Thanks for your comments!\nPlease send so I can contact you.";
+  let contactEntered = "Thank you for the message! \n\n*Form submission is disabled to prevent spam, but validation is still functioning.";
   let failAlert = "";
   let isValid = true;
 
